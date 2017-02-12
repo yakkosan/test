@@ -8,8 +8,8 @@
 <script type="text/javascript">
   let localVideo = document.getElementById('local_video');
   let localStream;
-  delete navigator.mediaDevices.getUserMedia; 
   function startVideo() {
+    delete navigator.mediaDevices.getUserMedia; 
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function (stream) {
       localStream = stream;
